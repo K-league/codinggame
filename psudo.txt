@@ -1,0 +1,14 @@
+what is my data?
+    questions
+        should store questions in array
+        a question is an object
+        answers are part of object
+         as a,b,c  
+            buttons need to highlight when selected
+    time_left
+        time decreases by 10 seconds for incorrect responses
+        when timer finished ask for user initials
+what are the actions I need to do?
+    show user rank in chart
+    store user rank
+    compare ranks
