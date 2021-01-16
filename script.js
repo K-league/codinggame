@@ -1,6 +1,12 @@
 // variables
+var q1 = "Question 1"
+var q2 = "Question 2"
+var q3 = "Question 3"
+var q4 = "Question 4"
+var q5 = "Question 5"
+
 console.log('this is frm script.js')
-var question = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5"];
+var question = [q1, q2, q3, q4, q5];
 document.getElementById("demo").innerHTML = question[0];
 // array
 // var cars = ["Saab", "Volvo", "BMW"];
