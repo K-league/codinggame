@@ -12,3 +12,16 @@ what are the actions I need to do?
     show user rank in chart
     store user rank
     compare ranks
+
+    html form questions
+    html input radio
+    --->   <div class="card">
+      <h1>Todo Tracker</h1>
+      <form id="todo-form" method="POST">
+        <label for="todo-text">Add a Todo: </label>
+        <input type="text" placeholder="I need to..." name="todo-text" id="todo-text" />
+      </form>
+      <p>Todo Count: <span id="todo-count">0</span></p>
+      <ul id="todo-list"></ul>
+
+      js to manipulate the html form

@@ -6,21 +6,21 @@
     <title>Coding Game</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="q2.html">
-    <link href="q3.html">
-    <link href="q4.html">
 </head>
 <body>
-    <h1>Coding Game</h1>
-    <p id="demo"></p>
-    <script>console.log("this is from script tag");</script>
-    <article>
-        <article>
-            <div id="Question 1">
-                <h3>Who</h3>
-            </div>
-        </article> 
-    </article> 
+    <div class="card">
+        <h1>Coding Game Questions!</h1>
+        <form id="question-form">
+            <input type="radio" id="q1" name="js" value="jsdata">
+            <label for="js">JS</label><br>
+            <input type="radio" id="q2" name="css" value="cssdata">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="q3" name="html" value="htmldata">
+            <label for="html">HTML</label>
+        </form>
+        <p>Question Count: <span id="question-count">0</span></p>
+        
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
