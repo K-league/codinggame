@@ -25,3 +25,155 @@ what are the actions I need to do?
       <ul id="todo-list"></ul>
 
       js to manipulate the html form
+
+      I'm confused about how to make the JS do the mult choice questions. Found a tutuorial from Mike Dane of Giraffe Academy. Below are my notes:
+
+      var question = []
+      var score = 0;
+
+       for(var i=0; i < questions.length; i++){
+                //ask q to user and get response
+         var response = window.prompt(question[i].prompt);
+                //did user get the question right?
+         if(response == question[i].answer){
+               score++;
+               alert("Correct!");
+         } else {
+             alert("Wrong!")
+         }
+           }
+           }
+           alert("You got " + score + "/" + question.length);
+
+      var question = [
+          {
+              prompt: "What color are apples?\n(a) Teal\n
+              (b) Magentan\n(c) Yellow",
+              answer: "a"
+          },
+         {
+              prompt: "What color are bananas?\n(a) Teal\n
+              (b) Magentan\n(c) Yellow",
+              answer: "c"
+          },
+           {
+              prompt: "What color are strawberries?\n(a) Teal\n
+              (b) Magentan\n(c) Yellow",
+              answer: "a"
+          },
+      ]
+
+"...creating an ARRAY of question OBJECTS...grab each question get that answer and ask if use got it right"
+
+Code Explained has a video that is more JS focused rather than html with a time guage, reading through the code helps me to see what I am looking for in my code
+onclick events and answer checking.
+<body>
+<div id="start"> Start Quiz! </div>
+<div id="quiz" style = "display : none;"> </div>
+    <div id="qImage"> <img src="img.png"> </div>
+    <div id="question"> <p> Question </p> </div>
+        <div id="timer">
+            <div id="counter"> 6 </div>
+            <div id="btimeGuage"></div>
+            <div id="timeGuage"></div>
+        </div>
+<div id="choices">
+    <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
+    <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
+    <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
+</div>
+<div id="scoreContainer" style = "display : none;">
+    <img src="smile.png"><p>50%</p>
+</div>
+<script src="quiz.js"></script>
+___________________ JS
+
+const start = document.getElementById("start");
+
+const quiz = document.getElementById("quiz");
+
+const qImg = document.getElementById("questionImage");
+
+const question = document.getElementById("question");
+
+const counter = document.getElementById("counter");
+
+const timeGuage = document.getElementById("timeGuage");
+
+const choiceA = document.getElementById("A");
+const choiceB = document.getElementById("B");
+const choiceC = document.getElementById("C");
+
+const progess = document.getElementById("progress");
+
+const scoreContainer = document.getElementById("scoreContainer");
+
+Creat questions inside an ARRAY
+inside ARRAY every element will be an OBJECT
+
+let question = [
+    {
+        question : "What does HTML stand for?",
+        imgSrc : "img.png",
+        choiceA : "hyper text mark up language",
+        choiceB : "Hyplerlinks and Text Markup Language",
+        choiceC : "Home Tool Markup Language",
+        correct : "A"
+    },
+    {
+      question : "What does HTML stand for?",
+        imgSrc : "img.png",
+        choiceA : "hyper text mark up language",
+        choiceB : "Hyplerlinks and Text Markup Language",
+        choiceC : "Home Tool Markup Language",
+        correct : "A"  
+    },
+    {
+        question : "This is question #2",
+        imgSrc : "img/picture2.png",
+        choiceA : "The 1st Choice",
+        choiceB : "The 2st Choice",
+        choiceC : "The 3st Choice",
+        correct : "B"
+    },
+        {
+        question : "This is question #3",
+        imgSrc : "img/picture3.png",
+        choiceA : "The 1st Choice",
+        choiceB : "The 2st Choice",
+        choiceC : "The 3st Choice",
+        correct : "C"
+    },
+
+];
+
+questions[0].question
+questions[0].imgSrc
+questions[0].choiceA
+questions[0].choiceB
+questions[0].choiceC
+questions[0].correct
+
+QUESTIONS ARE VIISIBLE IN SOURCE Code
+
+ array = [ a, b, c, d]
+ array.length -> 4 thus array[3] -> d
+
+So out function for the array will be:
+
+function renderQuestion(){
+    let q = questions[runningQuestionIndex];
+    qImg.innerHTML = "<img src=" + q.imgSrc + ">";
+
+    question.innerHTML = "<p>" + q.question+ "</p>";
+
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceB.innerHTML = q.choiceC;
+}
+
+runningQuestionIndex = 0;
+renderQuestion()
+
+runningQuestionIndex++
+renderQuestion()
